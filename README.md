@@ -2,7 +2,7 @@
 
 ### TinyDSL.Xml
 
-Install: `Install-Package TinyDSL.Xml`
+Install: `Install-Package TinyDSL.Xml`  
 Usage Sample:
 ```
     class Program
