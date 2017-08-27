@@ -72,7 +72,7 @@ namespace TinyDSL.Xml
                 throw new NotImplementedException();
             }
 
-            result = new XmlDynamicConstructor(Element, _root);
+            result = this;
             return true;
         }
 
