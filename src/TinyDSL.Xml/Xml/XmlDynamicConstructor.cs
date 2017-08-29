@@ -37,10 +37,37 @@ namespace TinyDSL.Xml
             var name = GetName(binder.Name);//TODO deal with numbers
             var child = new XElement(name);
 
-            if (args.Length > 0)
+            if (args.Length == 1)
             {
                 var arg = args[0];
-                XDC.SetAttributes(child, arg);
+                if (arg is string)
+                {
+                    child.Value = arg as string;
+                }
+                else
+                {
+                    XDC.SetAttributes(child, arg);
+                }
+            }
+            else if (args.Length == 2)
+            {
+                var firstArg = args[0];
+                if (firstArg is string)
+                {
+                    child.Value = firstArg as string;
+
+                    var secondArg = args[1];
+                    XDC.SetAttributes(child, secondArg);
+
+                }
+                else
+                {
+                    XDC.SetAttributes(child, firstArg);
+                }
+            }
+            else
+            {
+                throw new NotSupportedException("only support two input parameters. first one as inner text(optional) and second one as attributes(optional).");
             }
 
             Element.Add(child);
