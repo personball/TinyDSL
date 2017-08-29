@@ -19,7 +19,7 @@ Usage Sample:
                         })
                             .C
                                 .D
-                                    .E
+                                    .E("innerText")
                                     +
                                     XDC.New("F", new
                                     {
@@ -41,7 +41,7 @@ output:
     <B name="jerry" path="path/to/home">
       <C>
         <D>
-          <E />
+          <E>innerText</E>
           <F name="Tom">
             <G>
               <H>
