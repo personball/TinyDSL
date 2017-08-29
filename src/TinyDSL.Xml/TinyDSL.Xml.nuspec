@@ -12,7 +12,10 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>tiny dsl for xml construct</description>
     <releaseNotes>
-      create project tiny dsl for xml construct.
+
+      v1.0.1 support to set xml value (inner text).
+
+      v1.0.0 create project tiny dsl for xml construct.
     </releaseNotes>
     <copyright>Copyright 2017</copyright>
     <tags></tags>
